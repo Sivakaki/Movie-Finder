@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body class="dark">
+    <!-- NavBar -->
+    <nav>
+      <!-- logo -->
+      <ul>
+        <li class="logo">
+          <img src="./assets/logo.png" alt="Logo" />
+          <h2>Movie Finder</h2>
+        </li>
+
+        <li class="nav-right">
+          <a href="favourite.html">Favourites</a>
+          <div class="icon">
+            <img src="./assets/light-mode.png" alt="theme" id="theme-toggle" />
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- Container -->
+    <div class="container">
+      <section class="hero-section">
+        <h1>
+          Find Your Favorite Movies
+          <img src="./assets/film-dark.png" alt="film-logo" id="hero" />
+        </h1>
+        <p>Search millions of movies and discover detailed information.</p>
+        <!-- search container with autocomplete -->
+        <div class="search-box">
+          <div class="search-container">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for a movie..."
+              autocomplete="off"
+            />
+            <div id="suggestions-dropdown" class="suggestions-dropdown"></div>
+          </div>
+          <button id="search-btn">Search</button>
+        </div>
+
+        <!-- filters & sorting bar -->
+        <div class="filters-bar">
+          <select id="filter-type" class="filter-select">
+            <option value="">All Content</option>
+            <option value="movie">Movies</option>
+            <option value="series">TV Shows</option>
+            <option value="episode">Episodes</option>
+          </select>
+          <input
+            type="number"
+            id="filter-year"
+            class="filter-input"
+            placeholder="Filter by Year"
+            min="1880"
+          />
+          <select id="sort-by" class="filter-select">
+            <option value="">Default Order</option>
+            <option value="title-asc">Title (A-Z)</option>
+            <option value="title-desc">Title (Z-A)</option>
+            <option value="year-desc">Year (Newest)</option>
+            <option value="year-asc">Year (Oldest)</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- trending / popular section -->
+      <section class="trending-section">
+        <h2>Trending Popular Movies</h2>
+        <div class="movies" id="trending-container">
+          <!-- Populated dynamically via TMDb -->
+        </div>
+      </section>
+
+      <!-- movies section -->
+      <section class="movies-section hidden">
+        <h2>Search Results</h2>
+
+        <!-- loading section -->
+        <div class="loading hidden">
+          <div class="spinner"></div>
+          <p>Searching movies...</p>
+        </div>
+
+        <div class="movies" id="movies-container">
+          <!-- Movie Cards -->
+        </div>
+
+        <!-- pagination controls -->
+        <div class="pagination-container hidden">
+          <button id="load-more-btn" class="load-more-btn">Load More Results</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- toast container -->
+    <div id="toast-container"></div>
+
+    <!-- footer -->
+    <footer>
+      <p>Powered by OMDb API • Movie Finder</p>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

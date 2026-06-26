@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/movie.css" />
+  </head>
+  <body class="dark">
+    <nav>
+      <ul>
+        <li class="logo">
+          <img src="./assets/logo.png" alt="Logo" />
+          <h2>Movie Finder</h2>
+        </li>
+
+        <li class="nav-right">
+          <a href="index.html">Home</a>
+          <a href="favourite.html">Favourites</a>
+          <div class="icon">
+            <img src="./assets/light-mode.png" alt="theme" id="theme-toggle" />
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Backdrop Hero Section -->
+      <div class="backdrop-hero" id="backdrop-hero"></div>
+
+      <h1 class="page-title">Movie Details</h1>
+
+      <section class="poster">
+        <!-- Movie Info -->
+      </section>
+
+      <section class="might-like">
+        <h2>You Might Also Like</h2>
+
+        <div class="recommended-movies">
+          <!-- Recommended movie cards -->
+        </div>
+      </section>
+    </div>
+
+    <!-- YouTube Trailer Modal -->
+    <div class="modal-overlay" id="trailer-modal">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <div id="trailer-player" style="width:100%; height:100%;"></div>
+      </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container"></div>
+
+    <footer>
+      <p>Powered by OMDb API • Movie Finder</p>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/movie.js"></script>
+  </body>
+</html>

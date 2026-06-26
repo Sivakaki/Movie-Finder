@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourites</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/favourite.css" />
+  </head>
+  <body class="dark">
+    <!-- NavBar -->
+    <nav>
+      <ul>
+        <!-- logo -->
+        <li class="logo">
+          <img src="./assets/logo.png" alt="Logo" />
+          <h2>Movie Finder</h2>
+        </li>
+
+        <li class="nav-right">
+          <a href="index.html">Home</a>
+          <a href="favourite.html">Favourites</a>
+          <div class="icon">
+            <img src="./assets/light-mode.png" alt="theme" id="theme-toggle" />
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- container -->
+    <div class="container">
+      <h1>Your Favourite Movies</h1>
+
+      <!-- controls (search & clear) -->
+      <div class="fav-controls hidden" id="fav-controls">
+        <input type="text" id="fav-search" placeholder="Search within favourites..." autocomplete="off" />
+        <button id="clear-all-btn" class="clear-all-btn">Clear All</button>
+      </div>
+
+      <!-- empty state -->
+      <div class="empty-state" id="empty-state">
+        <h2>No Favourite Movies Yet</h2>
+        <p>Add movies from the home page to see them here.</p>
+      </div>
+
+      <!-- favourites  container -->
+      <div class="favourites-container hidden">
+        <!-- Favourite Cards -->
+      </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container"></div>
+
+    <!-- footer -->
+    <footer>
+      <p>Powered by OMDb API • Movie Finder</p>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/favourite.js"></script>
+  </body>
+</html>
